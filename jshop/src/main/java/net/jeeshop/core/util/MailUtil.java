@@ -36,10 +36,11 @@ import org.slf4j.LoggerFactory;
 public class MailUtil {
 	private static final Logger logger = LoggerFactory.getLogger(MailUtil.class);
 	public static void main(String[] args) {//huangf@spider.com.cn
-		MailUtil mail = new MailUtil("543089122@qq.com",
-				"xxx@163.com","xxx", "smtp.163.com", "标题");
-		mail.attachfile("e:\\1.jpg");
-		mail.attachfile("e:\\bsa.js");
+		MailUtil mail = new MailUtil("yuyongjian1314@163.com",
+				"jshop123@sina.cn","jshop123456", "smtp.sina.cn", "标题");
+		mail.startSend("Test send","hello world");
+		//mail.attachfile("e:\\1.jpg");
+		//mail.attachfile("e:\\bsa.js");
 //		mail.attachfile("e:\\aa.txt");
 //		mail.startSend(getForgetHtml(null));
 	}
@@ -91,12 +92,14 @@ public class MailUtil {
 			// 创建Properties对象
 			Properties props = System.getProperties();
 			// 创建信件服务器
+			props.put("mail.transport.protocol", "smtp");
 			props.put("mail.smtp.auth","true");   
 			props.put("mail.smtp.host", host);
-			props.put("mail.smtp.password", "0");
+			props.setProperty("mail.smtp.port", "25");
+
 			// 得到默认的对话对象
 //		 	Session session = Session.getDefaultInstance(props, null);
-			Session session = Session.getInstance(props, new PopupAuthenticator(this.from, this.password));
+			Session session = Session.getInstance(props, new PopupAuthenticator(from, this.password));
 
 			// 创建一个消息，并初始化该消息的各项元素
 			MimeMessage msg = new MimeMessage(session);
@@ -138,6 +141,11 @@ public class MailUtil {
 			msg.setContent(mp);
 			// 设置信件头的发送日期
 			msg.setSentDate(new Date());
+
+//			Transport transport= session.getTransport("smtp");
+//			transport.connect(host,from,password);
+//			transport.sendMessage(msg,msg.getRecipients(Message.RecipientType.TO));
+
 			// 发送信件
 			Transport.send(msg);
 		}catch(Exception e){
