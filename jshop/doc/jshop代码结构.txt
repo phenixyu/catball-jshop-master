@@ -1,0 +1,24 @@
+net.jeeshop.core
+net.jeeshop.service.common  -> 存放PO，类似于hibernate中的实体类，基本是与数据库字段一对一关系
+
+net.jeeshop.service.front -> 前端服务组件
+net.jeeshop.service.front.[module] -> 前端服务模块，service接口直接存放在此
+net.jeeshop.service.front.[module].bean -> 数据交换类, 类似DTO，继承于PO
+net.jeeshop.service.front.[module].dao -> dao接口
+net.jeeshop.service.front.[module].dao.impl -> dao实现
+net.jeeshop.service.front.[module].impl -> service实现
+
+net.jeeshop.service.manage -> 后台服务组件
+net.jeeshop.service.manage.[module] -> 后台服务模块，service接口直接存放在此
+net.jeeshop.service.manage.[module].bean -> 数据交换类 ，类似于DTO，继承于PO
+net.jeeshop.service.manage.[module].dao -> dao接口
+net.jeeshop.service.manage.[module].dao.impl -> dao实现
+net.jeeshop.service.manage.[module].impl -> service实现
+
+net.jeeshop.web.action.front.[module] -> 前端controller
+net.jeeshop.web.action.manage.[module] -> 后台controller
+
+所有mybatis映射文件存放于src/main/resources/config中
+/base -> 权限相关映射文件
+module/front -> 前端映射文件
+module/manage -> 后台映射文件
