@@ -20,5 +20,5 @@ net.jeeshop.web.action.manage.[module] -> 后台controller
 
 所有mybatis映射文件存放于src/main/resources/config中
 /base -> 权限相关映射文件
-module/front -> 前端映射文件
-module/manage -> 后台映射文件
+/module/front -> 前端映射文件
+/module/manage -> 后台映射文件
