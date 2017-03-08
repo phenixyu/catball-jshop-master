@@ -99,7 +99,7 @@ public class FreemarkerHelper {
 		}
 		
 		Configuration freemarkerCfg = new Configuration();
-		// 加载模版
+		// 加载模版,path 是相对于webapp文件夹的路径
 		freemarkerCfg.setServletContextForTemplateLoading(context, "/template");
 		freemarkerCfg.setEncoding(Locale.getDefault(), "UTF-8");
 		freemarkerCfg.setDefaultEncoding("UTF-8");
