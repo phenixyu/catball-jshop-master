@@ -867,7 +867,7 @@ CREATE TABLE `t_hotquery` (
 
 LOCK TABLES `t_hotquery` WRITE;
 /*!40000 ALTER TABLE `t_hotquery` DISABLE KEYS */;
-INSERT INTO `t_hotquery` VALUES (1,'苹果5s','http://localhost:8080/jeeshop/'),(2,'小米3','http://localhost:8080/jeeshop/product/10263.html'),(3,'韩寒小说','http://localhost:8080/jeeshop/product/10259.html'),(4,'狂人日记','http://localhost:8080/jeeshop/product/10315.html');
+INSERT INTO `t_hotquery` VALUES (1,'苹果5s','http://localhost:8080/jeeshop/'),(2,'小米3','http://localhost:8080/jshop/product/10263.html'),(3,'韩寒小说','http://localhost:8080/jshop/product/10259.html'),(4,'狂人日记','http://localhost:8080/jshop/product/10315.html');
 /*!40000 ALTER TABLE `t_hotquery` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -921,7 +921,7 @@ CREATE TABLE `t_index_img` (
 
 LOCK TABLES `t_index_img` WRITE;
 /*!40000 ALTER TABLE `t_index_img` DISABLE KEYS */;
-INSERT INTO `t_index_img` VALUES (16,'TOPOT 2014春装新款休闲加厚衬衣 韩版修身磨毛格子男士长袖衬衫','/attached/image/20140304/1393898334824_3.jpg',10,'','http://localhost:8080/jeeshop/product/10251.html'),(17,'苹果3','/attached/image/20140304/1393898353965_3.jpg',3,'','http://localhost:8080/jeeshop/product/10253.html'),(18,'小米3','/attached/image/20140304/1393901989351_3.jpg',2,'','http://localhost:8080/jeeshop/product/10263.html');
+INSERT INTO `t_index_img` VALUES (16,'TOPOT 2014春装新款休闲加厚衬衣 韩版修身磨毛格子男士长袖衬衫','/attached/image/20140304/1393898334824_3.jpg',10,'','http://localhost:8080/jshop/product/10251.html'),(17,'苹果3','/attached/image/20140304/1393898353965_3.jpg',3,'','http://localhost:8080/jshop/product/10253.html'),(18,'小米3','/attached/image/20140304/1393901989351_3.jpg',2,'','http://localhost:8080/jshop/product/10263.html');
 /*!40000 ALTER TABLE `t_index_img` ENABLE KEYS */;
 UNLOCK TABLES;
 
